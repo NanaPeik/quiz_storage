@@ -1,6 +1,8 @@
-package ge.tsu.android.lecture4.data;
+package ge.tsu.android.lecture4.History;
 
 import java.util.ArrayList;
+
+import ge.tsu.android.lecture4.History.QuizHistory;
 
 public class QuizHistoryStorage  {
 

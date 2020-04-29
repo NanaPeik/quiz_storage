@@ -17,14 +17,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-import ge.tsu.android.lecture4.data.QuizHistory;
+import ge.tsu.android.lecture4.History.QuizHistory;
+import ge.tsu.android.lecture4.History.QuizHistoryStorage;
+import ge.tsu.android.lecture4.data.Storage;
+import ge.tsu.android.lecture4.data.StorageImpl;
 
 public class HistoryActivity extends AppCompatActivity {
 
     private ListView mResults;
     private HistoryArrayAdapter historyArrayAdapter;
-protected String date;
-protected String point;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,13 +34,18 @@ protected String point;
         mResults=findViewById(R.id.history);
         historyArrayAdapter=new HistoryArrayAdapter(this,0,new ArrayList<QuizHistory>());
         mResults.setAdapter(historyArrayAdapter);
-        Intent intent=getIntent();
-        if(intent.hasExtra("Date_Point")){
-            String[] date_point=intent.getStringExtra("Date_Point").split("$");
-            date=date_point[0];
-            point=date_point[1];
+
+        Storage storage=new StorageImpl();
+        Object object=storage.getObject(this, QuizHistoryStorage.HISTORY_STORAGE_KEY,QuizHistoryStorage.class);
+        QuizHistoryStorage quizHistoryStorage;
+        if(object!=null){
+            quizHistoryStorage=(QuizHistoryStorage)object;
+            ArrayList<QuizHistory> quizHistories=quizHistoryStorage.getDataOfResults();
+            historyArrayAdapter.addAll(quizHistories);
         }
     }
+
+
 
     class HistoryArrayAdapter extends ArrayAdapter<QuizHistory> {
 
@@ -58,10 +64,11 @@ protected String point;
             QuizHistory current = getItem(position);
             LayoutInflater inflater = (LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View view = inflater.inflate(R.layout.view_history_item, parent, false);
+
             mDate=view.findViewById(R.id.dateId);
-            mDate.setText(date);
+            mDate.setText(current.getDate());
             mPoint=view.findViewById(R.id.pointId);
-            mPoint.setText(point);
+            mPoint.setText(current.getPoint());
 
             return view;
         }

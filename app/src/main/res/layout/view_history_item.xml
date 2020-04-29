@@ -2,28 +2,31 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:padding="16dp"
     android:layout_marginBottom="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Point  :  "
+            android:textSize="32dp"
+            android:layout_height="wrap_content"></TextView>
+        <TextView
+            android:id="@+id/pointId"
+            android:layout_width="wrap_content"
+            android:textSize="32dp"
+            android:text="Point"
+            android:layout_height="wrap_content"></TextView>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/dateId"
         android:layout_width="wrap_content"
         android:textSize="32dp"
         android:text="Date"
-        android:layout_height="wrap_content"></TextView>
-    <TextView
-        android:layout_marginLeft="16dp"
-        android:layout_width="wrap_content"
-        android:text="   :   "
-        android:textSize="32dp"
-        android:layout_height="wrap_content"></TextView>
-    <TextView
-        android:id="@+id/pointId"
-        android:layout_width="wrap_content"
-        android:textSize="32dp"
-        android:layout_marginLeft="16dp"
-        android:text="Point"
         android:layout_height="wrap_content"></TextView>
 
 </LinearLayout>

@@ -9,4 +9,6 @@ public interface Storage {
   Object getObject(Context context, String key, Class klass);
 
   String getString(Context context, String key);
+
+  void deleteQuestion(Context context, String keyofQuestion);
 }

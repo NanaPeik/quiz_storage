@@ -13,9 +13,9 @@
     android:background="@color/forback"
     android:text="Question Text Goes Here"
     android:textSize="20dp"
-      android:textStyle="bold"
-     android:layout_marginTop="16dp"
-      android:layout_marginBottom="16dp"></TextView>
+    android:textStyle="bold"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp"></TextView>
 
   <LinearLayout
       android:layout_width="match_parent"
@@ -28,12 +28,14 @@
         android:layout_height="wrap_content"
         android:text="answerOne"
         android:textSize="20dp"
+        android:onClick="sumOfPoints"
         android:textColor="@color/RebeccaPurple"
         ></TextView>
     <TextView
         android:id="@+id/answer2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="sumOfPoints"
         android:text="answerTwo"
         android:textSize="20dp"
         android:textColor="@color/RebeccaPurple"
@@ -47,6 +49,7 @@
     <TextView
         android:id="@+id/answer3"
         android:layout_width="wrap_content"
+        android:onClick="sumOfPoints"
         android:layout_height="wrap_content"
         android:text="answethree"
         android:textSize="20dp"
@@ -57,6 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="answerFour"
+        android:onClick="sumOfPoints"
         android:textSize="20dp"
         android:textColor="@color/RebeccaPurple"
         android:layout_marginLeft="40dp"

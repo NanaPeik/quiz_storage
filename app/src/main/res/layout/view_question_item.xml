@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+    android:paddingBottom="16dp">
+
+  <TextView
+    android:id="@+id/question"
+    android:layout_width="match_parent"
+    android:padding="8dp"
+    android:layout_height="wrap_content"
+    android:background="@color/forback"
+    android:text="Question Text Goes Here"
+    android:textSize="20dp"
+      android:textStyle="bold"
+     android:layout_marginTop="16dp"
+      android:layout_marginBottom="16dp"></TextView>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center">
+
+    <TextView
+        android:id="@+id/answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="answerOne"
+        android:textSize="20dp"
+        android:textColor="@color/RebeccaPurple"
+        ></TextView>
+    <TextView
+        android:id="@+id/answer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="answerTwo"
+        android:textSize="20dp"
+        android:textColor="@color/RebeccaPurple"
+        android:layout_marginLeft="40dp"
+        ></TextView>
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center">
+    <TextView
+        android:id="@+id/answer3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="answethree"
+        android:textSize="20dp"
+        android:textColor="@color/RebeccaPurple"
+        ></TextView>
+    <TextView
+        android:id="@+id/answer4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="answerFour"
+        android:textSize="20dp"
+        android:textColor="@color/RebeccaPurple"
+        android:layout_marginLeft="40dp"
+        ></TextView>
+  </LinearLayout>
+<TextView
+    android:id="@+id/deletequestion"
+    android:gravity="end"
+    android:textSize="20dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="delete this question"></TextView>
+</LinearLayout>

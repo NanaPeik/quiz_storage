@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:gravity="center_horizontal"
+  android:orientation="vertical"
+  android:padding="16dp">
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Add Question"
+      android:textColor="@color/RebeccaPurple"
+    android:textSize="30dp"></TextView>
+
+  <EditText
+    android:id="@+id/question"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Question"
+      android:layout_marginTop="8dp"></EditText>
+  <EditText
+    android:id="@+id/answer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Enter Rigth Answer here"
+      android:layout_marginTop="8dp"></EditText>
+  <EditText
+      android:id="@+id/answer2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Answer"
+      android:layout_marginTop="8dp"></EditText>
+  <EditText
+      android:id="@+id/answer3"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Answer"
+      android:layout_marginTop="8dp"></EditText>
+  <EditText
+      android:id="@+id/answer4"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Answer"
+      android:layout_marginTop="8dp"></EditText>
+  <Button
+    android:layout_marginTop="16dp"
+    android:onClick="addQuestion"
+      android:padding="16dp"
+      android:background="@color/forback"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Add Question">
+
+  </Button>
+</LinearLayout>
